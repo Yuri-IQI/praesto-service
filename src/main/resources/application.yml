@@ -1,0 +1,23 @@
+server:
+  port: ${SERVER_PORT:9001}
+
+spring:
+  application:
+    name: praesto
+  config:
+    import: optional:dotenv
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${DISCOVERY-URL:9000}
+  instance:
+    metadata-map:
+      protocol: websocket
+      ws-endpoint: /ws
+    prefer-ip-address: true
+    instance-id: ${INSTANCE_ID:${spring.application.name}:${server.port}}
