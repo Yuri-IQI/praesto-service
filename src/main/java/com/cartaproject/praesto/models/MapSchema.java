@@ -13,9 +13,10 @@ import java.util.Map;
 public class MapSchema {
     @Id
     private String id;
-    private String projectId;
+    private String userReg;
     private String name;
     private Map<String, Object> data;
     private StatusEnum status;
     private MapScopeEnum mapScope;
+    private String category;
 }

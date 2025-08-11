@@ -15,10 +15,11 @@ public class DocumentService {
 
     public void createReference(MapReference reference) {
         MapSchema schema = new MapSchema();
-        schema.setProjectId(reference.projectId());
+        schema.setUserReg(reference.userReg());
         schema.setName(reference.name());
         schema.setMapScope(reference.mapScope());
         schema.setStatus(StatusEnum.ACTIVE);
+        schema.setCategory(reference.category());
 
         mapRepository.save(schema);
     }

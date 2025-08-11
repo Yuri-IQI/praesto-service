@@ -3,7 +3,8 @@ package com.cartaproject.praesto.types.messages;
 import com.cartaproject.praesto.types.enums.MapScopeEnum;
 
 public record MapReference(
-        String projectId,
+        String userReg,
         String name,
-        MapScopeEnum mapScope
+        MapScopeEnum mapScope,
+        String category
 ) { }

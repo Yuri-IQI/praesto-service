@@ -5,7 +5,7 @@ spring:
   application:
     name: praesto
   config:
-    import: optional:dotenv
+    import: file:.env.properties
   data:
     mongodb:
       uri: mongodb://${MONGO_USER:admin}:${MONGO_PASSWORD:admin123}@${DB_HOST:localhost}:${DB_PORT:27017}/${DATABASE:general}?authSource=admin
