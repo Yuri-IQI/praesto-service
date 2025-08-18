@@ -12,8 +12,9 @@ public class MessageListener {
     @Autowired
     private DocumentService documentService;
 
-    @RabbitListener(queues = "register-queue")
+    @RabbitListener(queues = "register-queue", containerFactory = "rabbitListenerContainerFactory")
     public void receive(MapReference message) {
+        System.out.println(message);
         documentService.createReference(message);
     }
 }

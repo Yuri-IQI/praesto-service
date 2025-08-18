@@ -8,7 +8,7 @@ spring:
     import: file:.env.properties
   data:
     mongodb:
-      uri: mongodb://${MONGO_USER:admin}:${MONGO_PASSWORD:admin123}@${DB_HOST:localhost}:${DB_PORT:27017}/${DATABASE:general}?authSource=admin
+      uri: mongodb://${MONGO_USER:admin}:${MONGO_PASSWORD:admin}@${DB_HOST:localhost}:${DB_PORT:27017}/${DATABASE:general}?authSource=admin
   rabbitmq:
     host: ${RABBITMQ_HOST:localhost}
     port: ${RABBITMQ_PORT:5672}
